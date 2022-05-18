@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "downloader - help",
+            "type": "shell",
+            "command": "python",
+            "args": ["radio-gogaku-downloader.py", "-h"]
+        },
+        {
+            "label": "downloader - select",
+            "type": "shell",
+            "command": "python",
+            "args": ["radio-gogaku-downloader.py", "-s"]
+        },
+        {
+            "label": "downloader - output",
+            "type": "shell",
+            "command": "python",
+            "args": 
+            ["radio-gogaku-downloader.py",
+                "-d", "output", // 音声ファイルを保存する際のルートディレクトリの指定。
+                "-q", "1",      // 0: 64kbps (standard), 1: 128kbps (high), 2: 256kbps (best)。
+                "-y", "1",      // 0:年表示なし 1:年表示あり。
+                "-o", "2",      // ファイル名のオプション (2:/年度/講座名/講座名_日付.mp3)
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
