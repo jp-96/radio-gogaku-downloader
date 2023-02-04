@@ -7,16 +7,18 @@
             "label": "downloader - help",
             "type": "shell",
             "command": "python",
-            "args": ["radio-gogaku-downloader.py", "-h"]
+            "args": ["radio-gogaku-downloader.py", "-h"],
+            "problemMatcher": []
         },
         {
             "label": "downloader - select",
             "type": "shell",
             "command": "python",
-            "args": ["radio-gogaku-downloader.py", "-s"]
+            "args": ["radio-gogaku-downloader.py", "-s"],
+            "problemMatcher": []
         },
         {
-            "label": "downloader - output",
+            "label": "downloader - output (build task)",
             "type": "shell",
             "command": "python",
             "args": 
@@ -29,7 +31,8 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
